@@ -1,0 +1,212 @@
+{
+  "target": "Fama and French (1992), main Tables I-VI and appendix AI-AIV",
+  "tax_variable": "txditc",
+  "include_appendix": false,
+  "source_metadata": {
+    "ccm_links": {
+      "construction": "Unmodified read-only reference CCM extract",
+      "reference_path": "E:\\Workstation\\coding_projects\\coding_research\\paper_replication\\JNS1993_VME_Momentum\\data\\raw\\lsv1994\\nyse_amex_nasdaq_19570101_20241231_comp19570101_20241231\\ccm_links.parquet",
+      "reference_sha256": "aedd8b85c15cc70f3edf5eae5ef52ce3f824118ead405347284db365d4d9e209",
+      "reference_metadata": {
+        "dataset": "ccm_links",
+        "signature": "669fbde6c2efff78f4d801fa44a487715a870a1729bdbf93cec27e083861fbf2",
+        "cache_version": 1,
+        "sql": "\nselect gvkey, lpermno as permno, linkdt, linkenddt, linktype, linkprim, liid\nfrom crsp.ccmxpf_linktable\nwhere lpermno is not null\n  and linktype in ('LC', 'LU', 'LS')\norder by gvkey, lpermno, linkdt nulls first, linkenddt nulls first,\n         linktype, linkprim nulls first, liid nulls first\n",
+        "params": {},
+        "universe": "nyse_amex_nasdaq",
+        "date_columns": [
+          "linkdt",
+          "linkenddt"
+        ],
+        "key_columns": [
+          "gvkey",
+          "permno",
+          "linkdt",
+          "linkenddt",
+          "linktype",
+          "linkprim",
+          "liid"
+        ],
+        "rows": 41036,
+        "columns": [
+          "gvkey",
+          "permno",
+          "linkdt",
+          "linkenddt",
+          "linktype",
+          "linkprim",
+          "liid"
+        ],
+        "first_date": "1949-07-01",
+        "last_date": "2025-12-31",
+        "downloaded_at_utc": "2026-10-23T01:00:44.529076+00:00",
+        "reference_notebook": "references/lsv1994_table1_wrds_replication.ipynb",
+        "data_source": "ccm",
+        "formation_exchange_codes": [
+          1,
+          2,
+          3
+        ],
+        "formation_share_codes": [
+          10,
+          11
+        ],
+        "exchange_and_share_filters_applied": false,
+        "return_units": "decimal",
+        "delisting_return_adjustment": false,
+        "delisting_returns_in_source": false,
+        "shares_outstanding_units": "thousands",
+        "compustat_monetary_units": "millions of reported currency; curcd retained",
+        "market_equity_formula_usd_millions": "abs(prc) * shrout / 1000",
+        "accounting_timing": "April t formation uses prior-year accounts; later rows are outcomes only"
+      },
+      "specification_sha256": "e9d89d4731d4a7eab5bf08898baabc0dccd5851db7eea687ab084ae527b5b971",
+      "file_sha256": "aedd8b85c15cc70f3edf5eae5ef52ce3f824118ead405347284db365d4d9e209",
+      "rows": 41036
+    },
+    "compustat_annual": {
+      "sql": "\nselect gvkey, datadate, fyear, fyr, popsrc, curcd, sich,\n       at, ceq, txdb, txditc, ib, txdi, dvp\nfrom comp.funda\nwhere indfmt='INDL' and datafmt='STD' and consol='C'\n  and datadate between date '1962-01-01' and date '1989-12-31'\norder by gvkey, datadate, popsrc\n",
+      "specification_sha256": "688e25fc5b6018dd3dff685e15f5f71ecdc010ab15edb261ee14aeac035f01e4",
+      "file_sha256": "48e484bdfaa6ba56ddb2306ad491a3237623af1dc5b86b87bb7bd621b7d53aca",
+      "rows": 168139,
+      "retrieved_at_utc": "2026-10-23T14:19:16.800305+00:00",
+      "source": "WRDS legacy CRSP / Compustat"
+    },
+    "crsp_monthly": {
+      "construction": "Reference CRSP 1957-1990 plus WRDS 1935-1956, enriched with dated CRSP names",
+      "reference_path": "E:\\Workstation\\coding_projects\\coding_research\\paper_replication\\JNS1993_VME_Momentum\\data\\raw\\lsv1994\\nyse_amex_nasdaq_19570101_20241231_comp19570101_20241231\\crsp_monthly.parquet",
+      "reference_sha256": "7999da27c31428ede998cc5410fe6aed56e1887ce0663240600cd6f53bc6ab72",
+      "reference_metadata": {
+        "dataset": "crsp_monthly",
+        "signature": "1a11ca7c5d0db3d08be7233073539c5453e203b5dcb2da6dac24cdbd2a70546b",
+        "cache_version": 1,
+        "sql": "\nselect a.permno, a.date, a.ret, a.prc, a.shrout, b.shrcd, b.exchcd\nfrom crsp.msf as a\nleft join crsp.msenames as b\n    on a.permno = b.permno\n   and b.namedt <= a.date\n   and a.date <= coalesce(b.nameendt, date '9999-12-31')\nwhere a.date between %(start_date)s::date and %(end_date)s::date\norder by a.permno, a.date\n",
+        "params": {
+          "start_date": "1957-01-01",
+          "end_date": "2024-12-31"
+        },
+        "universe": "nyse_amex_nasdaq",
+        "date_columns": [
+          "date"
+        ],
+        "key_columns": [
+          "permno",
+          "date"
+        ],
+        "rows": 4842296,
+        "columns": [
+          "permno",
+          "date",
+          "ret",
+          "prc",
+          "shrout",
+          "shrcd",
+          "exchcd"
+        ],
+        "first_date": "1957-01-31",
+        "last_date": "2024-12-31",
+        "downloaded_at_utc": "2026-10-23T01:19:19.843051+00:00",
+        "reference_notebook": "references/lsv1994_table1_wrds_replication.ipynb",
+        "data_source": "legacy",
+        "formation_exchange_codes": [
+          1,
+          2,
+          3
+        ],
+        "formation_share_codes": [
+          10,
+          11
+        ],
+        "exchange_and_share_filters_applied": false,
+        "return_units": "decimal",
+        "delisting_return_adjustment": false,
+        "delisting_returns_in_source": false,
+        "shares_outstanding_units": "thousands",
+        "compustat_monetary_units": "millions of reported currency; curcd retained",
+        "market_equity_formula_usd_millions": "abs(prc) * shrout / 1000",
+        "accounting_timing": "April t formation uses prior-year accounts; later rows are outcomes only"
+      },
+      "specification_sha256": "9c01c96bd462b7d68149d6693c867ae0d09ff8732bb3c9a9a9a710c679aa53c9",
+      "file_sha256": "01709b688473a8603b24c7e76dcd4a3bda3044a3ac4938b6b7fa904abc61b8d6",
+      "rows": 1891464,
+      "return_units": "decimal",
+      "delisting_adjustment": "none; legacy CRSP RET"
+    },
+    "early_crsp": {
+      "sql": "select permno, permco, date, ret, prc, shrout from crsp.msf where date between date '1935-12-01' and date '1956-12-31'",
+      "specification_sha256": "2ada67c37b31b5244b1f3a5b466eca10853b0e47e5235b8074e4520df4170dba",
+      "file_sha256": "c9a39c8b785a37886ca83ab3241e90b7e54b2e858cf96252a3e2058a91a2086e",
+      "rows": 229534,
+      "retrieved_at_utc": "2026-10-23T13:42:57.314806+00:00",
+      "source": "WRDS legacy CRSP / Compustat"
+    },
+    "market_returns": {
+      "sql": "\nselect date, vwretd, ewretd\nfrom crsp.msi\nwhere date between date '1935-12-01' and date '1990-12-31'\norder by date\n",
+      "specification_sha256": "7d185885e1c713baf85d5274722374713b8dc921b37dc2e7d2b78980fad34287",
+      "file_sha256": "d1f7c1b920491c7fb5d0a8fa6cbc1034e8702681bd90a1ff5b40cf68947b88a6",
+      "rows": 661,
+      "retrieved_at_utc": "2026-10-23T13:54:59.778962+00:00",
+      "source": "WRDS, CRSP legacy FIZ / Compustat North America / CCM",
+      "return_units": "decimal",
+      "market_equity_units": "USD millions = abs(prc)*shrout/1000",
+      "delisting_adjustment": "none; original CRSP RET, no additional DLRET merge"
+    },
+    "names": {
+      "sql": "select permno, permco, namedt, nameendt, exchcd, shrcd, siccd from crsp.msenames where namedt <= date '1990-12-31' and coalesce(nameendt,date '9999-12-31') >= date '1935-12-01'",
+      "specification_sha256": "9f85386f099d8757e866f850c2abfbc395c9e16e137ad89999f6a9ace2f5f275",
+      "file_sha256": "238f929d109832f4b0d9d8196dabd703da619379e2796630db66381bd6f969e1",
+      "rows": 37257,
+      "retrieved_at_utc": "2026-10-23T13:46:53.149390+00:00",
+      "source": "WRDS legacy CRSP / Compustat"
+    },
+    "nyse_market": {
+      "sql": "\nselect caldt as date, vwretd, ewretd\nfrom crsp_a_indexes.msia\nwhere caldt between date '1935-12-01' and date '1990-12-31'\norder by caldt\n",
+      "specification_sha256": "ca0477235f5114c53ce574b437ba5e50f097c10c7a2d23dbf25a3767a0dfbbb5",
+      "file_sha256": "6db951512b77b0c10e8f4191bd0612653228954e6916029dd872c366c1d273b7",
+      "rows": 661,
+      "retrieved_at_utc": "2026-10-23T13:55:06.129054+00:00",
+      "source": "WRDS, CRSP legacy FIZ / Compustat North America / CCM",
+      "return_units": "decimal",
+      "market_equity_units": "USD millions = abs(prc)*shrout/1000",
+      "delisting_adjustment": "none; original CRSP RET, no additional DLRET merge"
+    }
+  },
+  "french_metadata": {
+    "100_Portfolios_10x10_CSV": {
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/100_Portfolios_10x10_CSV.zip",
+      "sha256": "c6309bb65b80f0bd232e3214ebb45595a7021fcbc40ccf4968e5cbd73e116b9e",
+      "retrieved_at_utc": "2026-10-23T13:38:20.711693+00:00",
+      "role": "supplementary benchmark; not the original 1992 portfolio definitions"
+    },
+    "F-F_Research_Data_Factors_CSV": {
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+      "sha256": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+      "retrieved_at_utc": "2026-10-23T13:38:21.872384+00:00",
+      "role": "supplementary benchmark; not the original 1992 portfolio definitions"
+    },
+    "Portfolios_Formed_on_BE-ME_CSV": {
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Portfolios_Formed_on_BE-ME_CSV.zip",
+      "sha256": "9a701c046c81aea43627fda7dcc4a6a516ccccbf80593da25572f4dc0b5e7b5d",
+      "retrieved_at_utc": "2026-10-23T13:33:09.460149+00:00",
+      "role": "supplementary benchmark; not the original 1992 portfolio definitions"
+    },
+    "Portfolios_Formed_on_ME_CSV": {
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Portfolios_Formed_on_ME_CSV.zip",
+      "sha256": "f6c4c440b4c6f26f1f01365e84ccae5338ae52e65057034d2ef3d3c0c1843020",
+      "retrieved_at_utc": "2026-10-23T13:33:07.420800+00:00",
+      "role": "supplementary benchmark; not the original 1992 portfolio definitions"
+    }
+  },
+  "paper_benchmark_file": "config/paper_benchmarks.json",
+  "paper_benchmark_sha256": "c380c5d86f85378593b88843c4fd3a6242c32604c1eb65ea494dc45da0e41d99",
+  "run_time_utc": "2026-10-23T14:25:59.831897+00:00",
+  "python_version": "3.12.13 (main, Jul 23 2026, 14:44:57) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.0",
+    "matplotlib": "3.11.2",
+    "sqlalchemy": "2.0.55",
+    "psycopg2-binary": "2.9.13"
+  }
+}

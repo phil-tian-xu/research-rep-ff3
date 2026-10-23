@@ -1,0 +1,21 @@
+[project]
+name = "research-rep-ff1992"
+version = "0.1.0"
+description = "Replication of Fama and French (1992), The Cross-Section of Expected Stock Returns"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy>=2,<3",
+    "pandas>=2.2,<3",
+    "pyarrow>=20",
+    "matplotlib>=3.9,<4",
+    "sqlalchemy>=2,<3",
+    "psycopg2-binary>=2.9,<3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--basetemp=tmp/pytest"
+pythonpath = ["."]

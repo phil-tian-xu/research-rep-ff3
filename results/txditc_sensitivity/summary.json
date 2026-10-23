@@ -1,0 +1,8 @@
+{
+  "conclusion": "The joint size/book-to-market regression gives a negative size coefficient (-0.106, t=-1.88) and a positive book-to-market coefficient (0.334, t=4.09). The beta-only premium is 0.104 (t=0.31). Coefficients use percentage monthly returns.",
+  "main_months": 330,
+  "average_stocks_per_month": 2359.869696969697,
+  "table_v_mae_percent": 0.10856382491553232,
+  "main_paper_sample_average_stocks": 2267,
+  "tax_variable": "txditc"
+}

@@ -1,0 +1,305 @@
+{
+  "june_common_with_december_and_beta": 92405,
+  "linked_before_filters": 81495,
+  "missing_sic": 0,
+  "financial": 8821,
+  "negative_or_zero_be": 1056,
+  "missing_txdb": 6597,
+  "missing_txdi": 12702,
+  "missing_dvp": 1699,
+  "overlapping_link_rows": 0,
+  "filter_count_stage": "Linked formation rows, before economic/accounting filters",
+  "formation_attrition_by_year": [
+    {
+      "formation_year": 1963,
+      "crsp_with_december_and_beta": 1047,
+      "linked_accounts": 711,
+      "known_nonfinancial": 695,
+      "positive_book_equity": 487,
+      "positive_assets": 487,
+      "positive_december_me": 487,
+      "available_earnings": 487
+    },
+    {
+      "formation_year": 1964,
+      "crsp_with_december_and_beta": 1069,
+      "linked_accounts": 750,
+      "known_nonfinancial": 732,
+      "positive_book_equity": 401,
+      "positive_assets": 401,
+      "positive_december_me": 400,
+      "available_earnings": 400
+    },
+    {
+      "formation_year": 1965,
+      "crsp_with_december_and_beta": 1822,
+      "linked_accounts": 1105,
+      "known_nonfinancial": 1066,
+      "positive_book_equity": 510,
+      "positive_assets": 510,
+      "positive_december_me": 510,
+      "available_earnings": 510
+    },
+    {
+      "formation_year": 1966,
+      "crsp_with_december_and_beta": 1863,
+      "linked_accounts": 1334,
+      "known_nonfinancial": 1285,
+      "positive_book_equity": 674,
+      "positive_assets": 674,
+      "positive_december_me": 671,
+      "available_earnings": 671
+    },
+    {
+      "formation_year": 1967,
+      "crsp_with_december_and_beta": 1892,
+      "linked_accounts": 1429,
+      "known_nonfinancial": 1374,
+      "positive_book_equity": 1048,
+      "positive_assets": 1048,
+      "positive_december_me": 1048,
+      "available_earnings": 1048
+    },
+    {
+      "formation_year": 1968,
+      "crsp_with_december_and_beta": 1840,
+      "linked_accounts": 1487,
+      "known_nonfinancial": 1430,
+      "positive_book_equity": 1238,
+      "positive_assets": 1238,
+      "positive_december_me": 1238,
+      "available_earnings": 1238
+    },
+    {
+      "formation_year": 1969,
+      "crsp_with_december_and_beta": 1826,
+      "linked_accounts": 1573,
+      "known_nonfinancial": 1514,
+      "positive_book_equity": 1328,
+      "positive_assets": 1328,
+      "positive_december_me": 1327,
+      "available_earnings": 1327
+    },
+    {
+      "formation_year": 1970,
+      "crsp_with_december_and_beta": 1898,
+      "linked_accounts": 1697,
+      "known_nonfinancial": 1633,
+      "positive_book_equity": 1481,
+      "positive_assets": 1481,
+      "positive_december_me": 1479,
+      "available_earnings": 1478
+    },
+    {
+      "formation_year": 1971,
+      "crsp_with_december_and_beta": 2007,
+      "linked_accounts": 1801,
+      "known_nonfinancial": 1723,
+      "positive_book_equity": 1709,
+      "positive_assets": 1709,
+      "positive_december_me": 1709,
+      "available_earnings": 1708
+    },
+    {
+      "formation_year": 1972,
+      "crsp_with_december_and_beta": 2127,
+      "linked_accounts": 1916,
+      "known_nonfinancial": 1823,
+      "positive_book_equity": 1812,
+      "positive_assets": 1812,
+      "positive_december_me": 1812,
+      "available_earnings": 1811
+    },
+    {
+      "formation_year": 1973,
+      "crsp_with_december_and_beta": 2204,
+      "linked_accounts": 2001,
+      "known_nonfinancial": 1885,
+      "positive_book_equity": 1876,
+      "positive_assets": 1876,
+      "positive_december_me": 1874,
+      "available_earnings": 1874
+    },
+    {
+      "formation_year": 1974,
+      "crsp_with_december_and_beta": 2288,
+      "linked_accounts": 2099,
+      "known_nonfinancial": 1956,
+      "positive_book_equity": 1943,
+      "positive_assets": 1943,
+      "positive_december_me": 1943,
+      "available_earnings": 1943
+    },
+    {
+      "formation_year": 1975,
+      "crsp_with_december_and_beta": 4371,
+      "linked_accounts": 3696,
+      "known_nonfinancial": 3397,
+      "positive_book_equity": 3383,
+      "positive_assets": 3383,
+      "positive_december_me": 3349,
+      "available_earnings": 3345
+    },
+    {
+      "formation_year": 1976,
+      "crsp_with_december_and_beta": 4343,
+      "linked_accounts": 3702,
+      "known_nonfinancial": 3394,
+      "positive_book_equity": 3368,
+      "positive_assets": 3368,
+      "positive_december_me": 3354,
+      "available_earnings": 3352
+    },
+    {
+      "formation_year": 1977,
+      "crsp_with_december_and_beta": 4315,
+      "linked_accounts": 3704,
+      "known_nonfinancial": 3392,
+      "positive_book_equity": 3355,
+      "positive_assets": 3355,
+      "positive_december_me": 3345,
+      "available_earnings": 3340
+    },
+    {
+      "formation_year": 1978,
+      "crsp_with_december_and_beta": 4185,
+      "linked_accounts": 3656,
+      "known_nonfinancial": 3335,
+      "positive_book_equity": 3305,
+      "positive_assets": 3305,
+      "positive_december_me": 3296,
+      "available_earnings": 3293
+    },
+    {
+      "formation_year": 1979,
+      "crsp_with_december_and_beta": 4096,
+      "linked_accounts": 3656,
+      "known_nonfinancial": 3318,
+      "positive_book_equity": 3281,
+      "positive_assets": 3281,
+      "positive_december_me": 3273,
+      "available_earnings": 3266
+    },
+    {
+      "formation_year": 1980,
+      "crsp_with_december_and_beta": 4004,
+      "linked_accounts": 3592,
+      "known_nonfinancial": 3226,
+      "positive_book_equity": 3198,
+      "positive_assets": 3198,
+      "positive_december_me": 3192,
+      "available_earnings": 3187
+    },
+    {
+      "formation_year": 1981,
+      "crsp_with_december_and_beta": 3980,
+      "linked_accounts": 3589,
+      "known_nonfinancial": 3204,
+      "positive_book_equity": 3182,
+      "positive_assets": 3182,
+      "positive_december_me": 3175,
+      "available_earnings": 3172
+    },
+    {
+      "formation_year": 1982,
+      "crsp_with_december_and_beta": 4013,
+      "linked_accounts": 3606,
+      "known_nonfinancial": 3193,
+      "positive_book_equity": 3152,
+      "positive_assets": 3152,
+      "positive_december_me": 3143,
+      "available_earnings": 3137
+    },
+    {
+      "formation_year": 1983,
+      "crsp_with_december_and_beta": 4278,
+      "linked_accounts": 3907,
+      "known_nonfinancial": 3421,
+      "positive_book_equity": 3370,
+      "positive_assets": 3370,
+      "positive_december_me": 3363,
+      "available_earnings": 3358
+    },
+    {
+      "formation_year": 1984,
+      "crsp_with_december_and_beta": 4343,
+      "linked_accounts": 3976,
+      "known_nonfinancial": 3443,
+      "positive_book_equity": 3381,
+      "positive_assets": 3381,
+      "positive_december_me": 3376,
+      "available_earnings": 3371
+    },
+    {
+      "formation_year": 1985,
+      "crsp_with_december_and_beta": 4394,
+      "linked_accounts": 4036,
+      "known_nonfinancial": 3471,
+      "positive_book_equity": 3394,
+      "positive_assets": 3394,
+      "positive_december_me": 3388,
+      "available_earnings": 3382
+    },
+    {
+      "formation_year": 1986,
+      "crsp_with_december_and_beta": 4729,
+      "linked_accounts": 4331,
+      "known_nonfinancial": 3746,
+      "positive_book_equity": 3645,
+      "positive_assets": 3645,
+      "positive_december_me": 3638,
+      "available_earnings": 3628
+    },
+    {
+      "formation_year": 1987,
+      "crsp_with_december_and_beta": 4600,
+      "linked_accounts": 4252,
+      "known_nonfinancial": 3655,
+      "positive_book_equity": 3557,
+      "positive_assets": 3557,
+      "positive_december_me": 3549,
+      "available_earnings": 3540
+    },
+    {
+      "formation_year": 1988,
+      "crsp_with_december_and_beta": 4765,
+      "linked_accounts": 4438,
+      "known_nonfinancial": 3712,
+      "positive_book_equity": 3599,
+      "positive_assets": 3599,
+      "positive_december_me": 3594,
+      "available_earnings": 3581
+    },
+    {
+      "formation_year": 1989,
+      "crsp_with_december_and_beta": 5081,
+      "linked_accounts": 4736,
+      "known_nonfinancial": 3852,
+      "positive_book_equity": 3714,
+      "positive_assets": 3714,
+      "positive_december_me": 3712,
+      "available_earnings": 3699
+    },
+    {
+      "formation_year": 1990,
+      "crsp_with_december_and_beta": 5025,
+      "linked_accounts": 4715,
+      "known_nonfinancial": 3799,
+      "positive_book_equity": 3653,
+      "positive_assets": 3653,
+      "positive_december_me": 3648,
+      "available_earnings": 3641
+    }
+  ],
+  "final_formation_rows": 68787,
+  "tax_variable": "txditc",
+  "monthly_stock_observations": 778757,
+  "months": 330,
+  "mean_stocks_per_month": 2359.869696969697,
+  "min_stocks_per_month": 398,
+  "max_stocks_per_month": 3678,
+  "missing_size_beta_portfolio_months": 0,
+  "minimum_post_ranking_beta_months": 330,
+  "raw_crsp_rows": 1891464,
+  "annual_accounting_rows_after_selection": 154979
+}

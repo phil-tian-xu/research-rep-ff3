@@ -6,7 +6,9 @@ data/*
 results/*
 !results/__init__.py
 
-uv.lock
+.uv-cache/
+tmp/
+.mpl-cache/
 
 /.venv
 /.pytest_cache
